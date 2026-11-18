@@ -1,0 +1,1315 @@
+/* =========================================================
+   Teachers' Journal (ISSN 2395-5627) — custom stylesheet
+   Style: heritage maroon & gold, cream canvas, serif headings
+   For OJS 3.3 "Manuscript (Default child theme)"
+   Upload: Settings > Website > Appearance > Advanced > Journal style sheet
+   ========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600;700&family=Noto+Serif+Bengali:wght@400;600&display=swap");
+
+:root {
+  --tj-maroon: #7a2414;
+  --tj-maroon-dark: #561709;
+  --tj-gold: #c8952e;
+  --tj-gold-light: #e7c27a;
+  --tj-cream: #f7efe1;
+  --tj-cream-2: #f5ebdd;
+  --tj-ink: #2a2420;
+  --tj-muted: #6b625b;
+  --tj-line: #e6dccd;
+  --tj-serif: "Playfair Display", "Noto Serif Bengali", Georgia, serif;
+  --tj-sans: "Source Sans 3", "Noto Serif Bengali", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+/* ---------- Canvas ---------- */
+body {
+  background: var(--tj-cream);
+  color: var(--tj-ink);
+  font-family: var(--tj-sans);
+  font-size: 16px;
+}
+.pkp_structure_page {
+  background: transparent;
+  box-shadow: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: none;
+}
+.pkp_structure_content {
+  background: #fff;
+  max-width: 1160px;
+  margin: 0 auto;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 6px 24px rgba(86, 23, 9, 0.06);
+  padding-top: 28px;
+}
+.pkp_structure_main,
+.pkp_structure_main p,
+.pkp_structure_sidebar {
+  font-family: var(--tj-sans);
+}
+.pkp_structure_main p {
+  line-height: 1.7;
+}
+
+/* ---------- Header: publisher strip + white masthead ---------- */
+.pkp_structure_head {
+  background: #fff;
+  border-bottom: 4px solid var(--tj-gold);
+  position: relative;
+}
+.pkp_structure_head::before {
+  content: "PUBLISHED BY: NABADWIP VIDYASAGAR COLLEGE, NADIA, WEST BENGAL          ISSN: 2395-5627";
+  display: block;
+  white-space: pre;
+  background: var(--tj-maroon);
+  color: #fff;
+  font-family: var(--tj-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-align: center;
+  padding: 5px 12px;
+}
+.pkp_head_wrapper {
+  max-width: 1160px;
+}
+.pkp_site_name_wrapper {
+  text-align: left;
+}
+.pkp_site_name {
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+.pkp_site_name .is_img img {
+  max-height: 104px;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(86, 23, 9, 0.15);
+}
+.pkp_site_name .is_text {
+  font-family: var(--tj-serif);
+  color: var(--tj-maroon);
+}
+
+/* User links (Register / Login / admin) */
+.pkp_navigation_user_wrapper {
+  background: var(--tj-maroon);
+}
+.pkp_navigation_user > li > a,
+.pkp_navigation_user .task_count {
+  font-family: var(--tj-sans);
+  color: #fff;
+}
+.pkp_navigation_user > li > a:hover {
+  color: var(--tj-gold-light);
+}
+
+/* ---------- Primary navigation bar ---------- */
+.pkp_navigation_primary_row {
+  background: var(--tj-maroon-dark);
+  border-bottom: 3px solid var(--tj-gold);
+  box-shadow: none;
+}
+.pkp_navigation_primary > li > a {
+  font-family: var(--tj-sans);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+  color: #fff;
+  border-bottom: 3px solid transparent;
+  transition: color .15s, border-color .15s;
+}
+.pkp_navigation_primary > li > a:hover,
+.pkp_navigation_primary > li > a:focus {
+  color: var(--tj-gold-light);
+  border-bottom-color: var(--tj-gold);
+  outline: none;
+}
+.pkp_navigation_primary ul {
+  background: #fff;
+  border-top: 3px solid var(--tj-gold);
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 10px 24px rgba(86, 23, 9, 0.18);
+}
+.pkp_navigation_primary ul a {
+  color: var(--tj-ink);
+  font-family: var(--tj-sans);
+}
+.pkp_navigation_primary ul a:hover {
+  color: var(--tj-maroon);
+  border-left-color: var(--tj-gold);
+}
+.pkp_navigation_search_wrapper a {
+  font-family: var(--tj-sans);
+  font-weight: 600;
+  color: #fff;
+  border-bottom-color: transparent;
+}
+.pkp_navigation_search_wrapper a:hover {
+  color: var(--tj-gold-light);
+  border-bottom-color: var(--tj-gold);
+}
+
+/* ---------- Typography ---------- */
+h1, h2, h3, h4,
+.page_title,
+.pkp_structure_main h1,
+.pkp_structure_main h2 {
+  font-family: var(--tj-serif);
+  color: var(--tj-maroon);
+}
+a {
+  color: var(--tj-maroon);
+}
+a:hover,
+a:focus {
+  color: var(--tj-gold);
+}
+.cmp_breadcrumbs {
+  font-family: var(--tj-sans);
+  font-size: 0.85rem;
+  color: var(--tj-muted);
+}
+.cmp_breadcrumbs a {
+  color: var(--tj-maroon);
+}
+
+/* ---------- Announcements (homepage) ---------- */
+.cmp_announcements {
+  background: var(--tj-cream-2);
+  border: 1px solid var(--tj-line);
+  border-left: 4px solid var(--tj-gold);
+  border-radius: 8px;
+  margin-bottom: 32px;
+}
+.cmp_announcements > .obj_announcement_summary,
+.cmp_announcements .more {
+  border-color: var(--tj-line);
+}
+.obj_announcement_summary h2,
+.obj_announcement_summary h3 {
+  font-family: var(--tj-serif);
+}
+.obj_announcement_summary h2 a,
+.obj_announcement_summary h3 a {
+  color: var(--tj-maroon);
+}
+.obj_announcement_summary .date {
+  color: var(--tj-muted);
+}
+.obj_announcement_summary .date::before {
+  color: var(--tj-gold);
+}
+.obj_announcement_summary .read_more {
+  font-weight: 700;
+  color: var(--tj-maroon);
+}
+
+/* ---------- Current issue / table of contents ---------- */
+.page_index_journal .current_issue > h2,
+.page_issue_archive .page_title,
+.page_issue .page_title {
+  font-family: var(--tj-serif);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--tj-maroon);
+  letter-spacing: 0;
+  text-transform: none;
+  border: none;
+  padding: 0;
+  margin-bottom: 14px;
+}
+.current_issue_title {
+  font-family: var(--tj-sans);
+  font-weight: 700;
+  color: var(--tj-ink);
+  font-size: 1.1rem;
+}
+.obj_issue_toc .heading {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--tj-line);
+  padding: 0 0 12px;
+}
+.obj_issue_toc .published .label {
+  font-weight: 700;
+  color: var(--tj-muted);
+}
+
+/* Section tag (e.g. "Articles", "Book Review") */
+.obj_issue_toc .section > h2,
+.obj_issue_toc .section > h3 {
+  display: inline-block;
+  background: var(--tj-maroon);
+  color: #fff;
+  font-family: var(--tj-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 4px 12px;
+  border-radius: 3px 3px 0 0;
+  margin: 28px 0 0;
+}
+.obj_issue_toc .section > .cmp_article_list {
+  border-top: 1px solid var(--tj-line);
+  padding-top: 18px;
+}
+.obj_issue_toc .section::before {
+  display: none;
+}
+
+/* Article entries: flat list with dividers */
+.cmp_article_list > li {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--tj-line);
+}
+.obj_article_summary {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+.obj_article_summary > .title {
+  font-family: var(--tj-sans);
+  font-size: 1rem;
+}
+.obj_article_summary > .title a {
+  color: var(--tj-ink);
+  font-weight: 700;
+}
+.obj_article_summary > .title a:hover {
+  color: var(--tj-maroon);
+}
+.obj_article_summary .subtitle {
+  color: var(--tj-muted);
+}
+.obj_article_summary .meta,
+.obj_article_summary .authors {
+  color: var(--tj-muted);
+  font-size: 0.9rem;
+}
+.obj_article_summary .pages {
+  color: var(--tj-muted);
+  font-size: 0.85rem;
+}
+
+/* PDF / galley buttons: outlined maroon */
+.obj_galley_link {
+  font-family: var(--tj-sans);
+  font-weight: 700;
+  font-size: 0.85rem;
+  background: #fff;
+  border: 1px solid var(--tj-maroon);
+  color: var(--tj-maroon);
+  border-radius: 6px;
+  padding: 6px 14px;
+  transition: background .15s, color .15s;
+}
+.obj_galley_link:hover,
+.obj_galley_link:focus {
+  background: var(--tj-maroon);
+  border-color: var(--tj-maroon);
+  color: #fff;
+}
+.obj_galley_link.pdf::before {
+  color: inherit;
+}
+
+.read_more,
+.current_issue .read_more {
+  font-family: var(--tj-sans);
+  font-weight: 700;
+  color: var(--tj-maroon);
+}
+
+/* ---------- Archive page (issue list) ---------- */
+.obj_issue_summary .title {
+  font-family: var(--tj-serif);
+  color: var(--tj-maroon);
+}
+.issues_archive > li {
+  border-bottom: 1px solid var(--tj-line);
+}
+
+/* ---------- Article landing page ---------- */
+.obj_article_details .page_title {
+  font-family: var(--tj-serif);
+  font-size: 1.85rem;
+  line-height: 1.3;
+  color: var(--tj-maroon);
+}
+.obj_article_details .subtitle {
+  color: var(--tj-muted);
+}
+.obj_article_details .item .label,
+.obj_article_details .main_entry .label {
+  font-family: var(--tj-serif);
+  color: var(--tj-maroon);
+}
+.obj_article_details .entry_details {
+  background: var(--tj-cream-2);
+  border: 1px solid var(--tj-line);
+  border-radius: 8px;
+}
+.obj_article_details .entry_details .item {
+  border-color: var(--tj-line);
+}
+.obj_article_details .entry_details .item .label {
+  font-family: var(--tj-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--tj-maroon);
+}
+.obj_article_details .abstract {
+  line-height: 1.75;
+}
+
+/* ---------- Sidebar ---------- */
+.pkp_structure_sidebar .pkp_block {
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+.pkp_block .title {
+  display: block;
+  font-family: var(--tj-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--tj-maroon);
+  border: none;
+  padding-bottom: 4px;
+  margin-bottom: 12px;
+}
+.pkp_block ul li a,
+.block_information ul li a {
+  color: var(--tj-maroon);
+  font-family: var(--tj-sans);
+  border: none;
+  padding: 4px 0;
+}
+
+/* Make a Submission — solid maroon button */
+.block_make_submission a {
+  display: block;
+  text-align: center;
+  background: var(--tj-maroon);
+  border: none;
+  border-radius: 6px;
+  color: #fff !important;
+  font-family: var(--tj-sans);
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+  padding: 12px 16px;
+  box-shadow: 0 3px 10px rgba(122, 36, 20, 0.25);
+  transition: background .15s;
+}
+.block_make_submission a:hover,
+.block_make_submission a:focus {
+  background: var(--tj-maroon-dark);
+  color: #fff !important;
+}
+
+/* ---------- Buttons & forms ---------- */
+.cmp_button,
+.pkp_button,
+button.submit,
+.cmp_form .buttons button {
+  font-family: var(--tj-sans);
+  border-radius: 6px;
+}
+.cmp_form .buttons button.submit,
+.cmp_button,
+.page_search .submit button {
+  background: var(--tj-maroon);
+  border-color: var(--tj-maroon);
+  color: #fff;
+  box-shadow: none;
+}
+.cmp_form .buttons button.submit:hover,
+.cmp_button:hover {
+  background: var(--tj-maroon-dark);
+}
+.cmp_form input[type="text"],
+.cmp_form input[type="email"],
+.cmp_form input[type="password"],
+.cmp_form select,
+.cmp_form textarea {
+  border-radius: 4px;
+  border-color: var(--tj-line);
+}
+.cmp_form input:focus,
+.cmp_form textarea:focus {
+  border-color: var(--tj-gold);
+}
+
+/* ---------- Footer: full-width dark maroon ---------- */
+.pkp_structure_footer_wrapper {
+  background: var(--tj-maroon-dark);
+  border-top: none;
+  color: #f3e6d3;
+  margin-top: 40px;
+}
+.pkp_structure_footer {
+  font-family: var(--tj-sans);
+  max-width: 1160px;
+}
+.pkp_footer_content,
+.pkp_footer_content p {
+  color: #f3e6d3;
+  text-align: center;
+}
+.pkp_footer_content h2,
+.pkp_footer_content h3,
+.pkp_footer_content strong {
+  font-family: var(--tj-serif);
+  color: #fff;
+}
+.pkp_footer_content a,
+.pkp_structure_footer_wrapper a {
+  color: var(--tj-gold-light);
+}
+.pkp_brand_footer img {
+  filter: brightness(0) invert(1);
+  opacity: 0.6;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 991px) {
+  .pkp_structure_head::before {
+    white-space: normal;
+  }
+  .pkp_site_name_wrapper {
+    text-align: center;
+  }
+  .pkp_site_name .is_img img {
+    max-height: 64px;
+  }
+  .pkp_site_nav_menu {
+    background: var(--tj-maroon-dark);
+  }
+  .pkp_structure_content {
+    border-radius: 0;
+  }
+}
+
+/* ---------- Overrides for Manuscript theme defaults ---------- */
+html,
+body {
+  background: var(--tj-cream);
+}
+.pkp_structure_head .pkp_site_name_wrapper {
+  background: transparent;
+}
+.pkp_navigation_user_wrapper {
+  top: 0;
+  background: transparent;
+}
+.pkp_navigation_user > li > a {
+  font-size: 12px;
+  line-height: 24px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+#navigationPrimary > li > a,
+.pkp_site_nav_menu .pkp_navigation_search_wrapper a {
+  color: #fff;
+  text-transform: none;
+}
+#navigationPrimary > li > a:hover,
+#navigationPrimary > li > a:focus,
+.pkp_site_nav_menu .pkp_navigation_search_wrapper a:hover {
+  color: var(--tj-gold-light);
+}
+#navigationPrimary ul a {
+  color: var(--tj-ink);
+}
+.obj_issue_toc .section > h2,
+.obj_issue_toc .section > h3 {
+  left: 0;
+}
+.pkp_page_index .current_issue .read_more,
+.cmp_announcements .read_more {
+  font-family: var(--tj-sans);
+  color: var(--tj-maroon);
+  text-transform: none;
+}
+.pkp_page_index .current_issue .read_more:hover,
+.cmp_announcements .read_more:hover {
+  color: var(--tj-gold);
+}
+.cmp_announcements .obj_announcement_summary h2,
+.cmp_announcements .obj_announcement_summary h3,
+.cmp_announcements .obj_announcement_summary h4,
+.cmp_announcements .date {
+  font-family: var(--tj-serif);
+}
+.cmp_announcements .date {
+  font-family: var(--tj-sans);
+}
+.pkp_structure_footer_wrapper {
+  border-bottom: none;
+}
+#navigationPrimary ul {
+  background: #fff;
+}
+#navigationPrimary ul a {
+  font-family: var(--tj-sans);
+  font-weight: 600;
+  text-transform: none;
+}
+#navigationPrimary ul a:hover,
+#navigationPrimary ul a:focus {
+  background: var(--tj-cream);
+  color: var(--tj-maroon);
+}
+.pkp_navigation_user_wrapper {
+  z-index: 5;
+}
+/* Admin/user menu sits inside the top publisher strip */
+.pkp_structure_head .pkp_navigation_user_wrapper {
+  top: -30px;
+}
+@media (max-width: 991px) {
+  .pkp_structure_head .pkp_navigation_user_wrapper {
+    top: auto;
+  }
+}
+
+/* =========================================================
+   Homepage "About the Journal" section (journal summary)
+   ========================================================= */
+.homepage_about,
+.page_index_journal .journal_summary {
+  margin-bottom: 32px;
+}
+.tj-about {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+  padding-bottom: 28px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid var(--tj-line);
+}
+.tj-cover {
+  flex: 0 0 170px;
+}
+.tj-cover img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 8px 22px rgba(86, 23, 9, 0.22);
+}
+.tj-about-body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.tj-about .tj-about-title {
+  font-family: var(--tj-serif);
+  font-size: 1.6rem;
+  color: var(--tj-maroon);
+  margin: 0 0 6px;
+}
+.tj-about .tj-meta {
+  font-size: 0.85rem;
+  color: var(--tj-muted);
+  padding-bottom: 10px;
+  margin: 0 0 14px;
+  border-bottom: 2px solid var(--tj-maroon);
+}
+.tj-about .tj-meta strong {
+  color: var(--tj-ink);
+}
+.tj-sep {
+  color: var(--tj-line);
+  margin: 0 6px;
+}
+.tj-about-body > p {
+  text-align: justify;
+  line-height: 1.7;
+}
+.tj-cards {
+  display: flex;
+  gap: 16px;
+  margin-top: 18px;
+}
+.tj-card {
+  flex: 1 1 0;
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+.tj-card h3 {
+  font-family: var(--tj-serif);
+  font-size: 1.05rem;
+  color: var(--tj-maroon);
+  margin: 0 0 10px;
+}
+.tj-profile {
+  background: var(--tj-cream-2);
+  border: 1px solid var(--tj-line);
+}
+.tj-profile table {
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+.tj-profile th {
+  text-align: left;
+  font-weight: 700;
+  color: var(--tj-ink);
+  padding: 3px 14px 3px 0;
+  vertical-align: top;
+}
+.tj-profile td {
+  color: var(--tj-muted);
+  padding: 3px 0;
+}
+.tj-cfp {
+  background: #fff;
+  border: 1px solid var(--tj-line);
+  border-left: 4px solid var(--tj-gold);
+}
+.tj-cfp p {
+  font-size: 0.9rem;
+  margin: 0 0 12px;
+}
+a.tj-btn {
+  display: inline-block;
+  background: var(--tj-maroon);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: background .15s;
+}
+a.tj-btn:hover,
+a.tj-btn:focus {
+  background: var(--tj-maroon-dark);
+  color: #fff;
+}
+
+/* =========================================================
+   Sidebar "Chief Editor" custom block
+   ========================================================= */
+.tj-editor {
+  text-align: center;
+}
+.tj-editor .title {
+  text-align: left;
+}
+.tj-editor p {
+  margin: 0 0 6px;
+}
+.tj-editor-name {
+  font-family: var(--tj-serif);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--tj-ink);
+}
+.tj-editor-role {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--tj-muted);
+}
+.tj-editor-mail a,
+.tj-editor-link a {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--tj-maroon);
+}
+
+/* =========================================================
+   Editorial Team page
+   ========================================================= */
+.tj-team-note {
+  color: var(--tj-muted);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+.tj-team h2 {
+  font-family: var(--tj-serif);
+  color: var(--tj-maroon);
+  font-size: 1.25rem;
+  margin: 2rem 0 1rem;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--tj-gold);
+}
+.tj-team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 12px;
+}
+.tj-member {
+  background: #fff;
+  border: 1px solid rgba(122, 36, 20, 0.15);
+  border-left: 3px solid var(--tj-maroon);
+  border-radius: 4px;
+  padding: 12px 14px;
+}
+.tj-member h3 {
+  font-family: var(--tj-serif);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--tj-ink);
+  margin: 0 0 4px;
+}
+.tj-member p {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--tj-muted);
+  margin: 0;
+}
+.tj-member-lead {
+  border-left-color: var(--tj-gold);
+  background: #fffaf2;
+}
+
+/* =========================================================
+   Three-column footer
+   ========================================================= */
+.pkp_structure_footer .pkp_footer_content {
+  text-align: left;
+  padding-top: 32px;
+}
+.tj-footer {
+  display: flex;
+  gap: 40px;
+  text-align: left;
+}
+.tj-footer-col {
+  flex: 1 1 0;
+}
+.tj-footer-main {
+  flex: 2 1 0;
+}
+.tj-footer h3 {
+  font-family: var(--tj-serif);
+  font-size: 1.1rem;
+  color: #fff;
+  margin: 0 0 10px;
+}
+.tj-footer p {
+  color: #f3e6d3;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0 0 6px;
+  text-align: left;
+}
+.tj-footer a {
+  color: var(--tj-gold-light);
+}
+.tj-footer a:hover {
+  color: #fff;
+}
+.pkp_footer_content p.tj-footer-copy {
+  text-align: center;
+  font-size: 0.85rem;
+  border-top: 1px solid rgba(243, 230, 211, 0.2);
+  margin-top: 24px;
+  padding-top: 16px;
+}
+
+@media (max-width: 767px) {
+  .tj-about,
+  .tj-cards,
+  .tj-footer {
+    flex-direction: column;
+  }
+  .tj-cover {
+    flex-basis: auto;
+    max-width: 160px;
+  }
+}
+
+/* Hide the theme's own "About the Journal" heading (our section has its own),
+   keeping it for screen readers */
+.homepage_about > h2 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+/* Sidebar order: Make a Submission, Chief Editor, then everything else */
+.pkp_structure_sidebar {
+  display: flex;
+  flex-direction: column;
+}
+.pkp_structure_sidebar > * {
+  order: 3;
+}
+.pkp_structure_sidebar > .block_make_submission {
+  order: 1;
+}
+.pkp_structure_sidebar > #customblock-chief-editor {
+  order: 2;
+}
+
+/* =========================================================
+   Article entries in issue tables of contents
+   (title / authors + pages / PDF button / abstract toggle)
+   ========================================================= */
+.obj_issue_toc .cmp_article_list > li {
+  padding: 22px 0;
+  margin: 0;
+}
+.obj_article_summary > .title {
+  font-size: 1.12rem;
+  line-height: 1.4;
+  margin: 0 0 6px;
+}
+.obj_article_summary > .title a {
+  font-weight: 600;
+}
+.obj_article_summary .meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 18px;
+  margin: 0;
+}
+.obj_article_summary .meta .authors {
+  font-size: 0.95rem;
+  color: var(--tj-muted);
+}
+.obj_article_summary .meta .pages {
+  font-size: 0.85rem;
+  color: var(--tj-muted);
+}
+.obj_article_summary .meta .pages::before {
+  content: "pp. ";
+}
+.obj_article_summary .galleys_links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin: 14px 0 0;
+  padding: 0;
+}
+.obj_article_summary .galleys_links:empty {
+  display: none;
+}
+.obj_article_summary .galleys_links li {
+  margin: 0;
+}
+.obj_article_summary .obj_galley_link {
+  padding: 8px 18px;
+  border-radius: 8px;
+}
+.obj_article_summary .obj_galley_link.pdf::before {
+  color: var(--tj-maroon);
+}
+.obj_article_summary .obj_galley_link.pdf:hover::before {
+  color: #fff;
+}
+
+/* Expandable abstract (added by the site script, when enabled) */
+.tj-abstract {
+  margin-top: 12px;
+}
+.tj-abstract > summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  list-style: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--tj-maroon);
+}
+.tj-abstract > summary::-webkit-details-marker {
+  display: none;
+}
+.tj-abstract > summary::before {
+  content: "+";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--tj-maroon);
+  border-radius: 3px;
+  font-size: 0.8rem;
+  line-height: 1;
+}
+.tj-abstract[open] > summary::before {
+  content: "\2212";
+}
+.tj-abstract > div {
+  margin-top: 10px;
+  padding: 14px 16px;
+  background: var(--tj-cream-2);
+  border-left: 3px solid var(--tj-gold);
+  border-radius: 0 6px 6px 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+/* Remove the "Platform & workflow by OJS / PKP" link from the footer */
+.pkp_brand_footer {
+  display: none !important;
+}
+
+/* =========================================================
+   Header: college emblem + journal name as text, on EVERY page.
+   Built from the logo link (present on all pages); the wide
+   banner image stays uploaded but is hidden.
+   ========================================================= */
+.pkp_structure_head .pkp_site_name_wrapper {
+  height: auto !important;
+}
+.pkp_structure_head .pkp_site_name {
+  position: static !important;
+  display: grid;
+  grid-template-columns: 96px auto;
+  grid-template-rows: 1fr auto auto 1fr;
+  column-gap: 22px;
+  align-items: center;
+  justify-content: start;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  padding: 22px 0;
+  margin: 0;
+}
+.pkp_structure_head .pkp_site_name::before {
+  content: none;
+  display: none;
+}
+.pkp_structure_head .pkp_site_name::after {
+  content: "A Multidisciplinary and Multilingual Peer-Reviewed Research Journal  |  ISSN 2395-5627";
+  grid-column: 2;
+  grid-row: 3;
+  align-self: start;
+  font-family: var(--tj-sans);
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--tj-muted);
+}
+.pkp_structure_head .pkp_site_name .is_img {
+  display: contents;
+  text-decoration: none;
+}
+.pkp_structure_head .pkp_site_name .is_img img {
+  display: none;
+}
+.pkp_structure_head .pkp_site_name .is_img::before {
+  content: "";
+  grid-column: 1;
+  grid-row: 1 / 5;
+  width: 96px;
+  height: 96px;
+  box-sizing: border-box;
+  background: #fff url("/public/journals/1/favicon_en_US.png") center / 84px no-repeat;
+  border: 1px solid var(--tj-line);
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(86, 23, 9, 0.12);
+}
+.pkp_structure_head .pkp_site_name .is_img::after {
+  content: "Teachers' Journal";
+  grid-column: 2;
+  grid-row: 2;
+  font-family: var(--tj-serif);
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--tj-maroon);
+}
+
+/* Header on phones and small tablets */
+@media (max-width: 991px) {
+  .pkp_structure_head::before {
+    display: none;
+  }
+  .pkp_structure_head .pkp_site_name_wrapper {
+    padding: 0 12px 0 58px;
+  }
+  .pkp_structure_head .pkp_site_nav_toggle {
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+  }
+  .pkp_structure_head .pkp_site_nav_toggle span::before,
+  .pkp_structure_head .pkp_site_nav_toggle span::after {
+    background-color: var(--tj-maroon);
+  }
+  .pkp_structure_head .pkp_site_name {
+    grid-template-columns: 52px auto;
+    column-gap: 12px;
+    padding: 12px 0;
+  }
+  .pkp_structure_head .pkp_site_name .is_img::before {
+    width: 52px;
+    height: 52px;
+    background-size: 44px;
+  }
+  .pkp_structure_head .pkp_site_name .is_img::after {
+    font-size: 1.35rem;
+  }
+  .pkp_structure_head .pkp_site_name::after {
+    content: "ISSN 2395-5627";
+    font-size: 0.72rem;
+  }
+}
+
+/* =========================================================
+   "Most read" sidebar block: match other block headings,
+   and hide it while it has no articles to list
+   ========================================================= */
+.pkp_block .most_read {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.pkp_block .most_read li {
+  margin: 0 0 10px;
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+.pkp_structure_sidebar .pkp_block:has(ul.most_read):not(:has(ul.most_read li)) {
+  display: none;
+}
+
+/* Editor photo (sidebar block and Editorial Team card) */
+.tj-editor-photo {
+  display: block;
+  width: 120px;
+  height: 140px;
+  object-fit: cover;
+  object-position: center top;
+  margin: 4px auto 10px;
+  border-radius: 6px;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 10px rgba(86, 23, 9, 0.18);
+}
+.tj-member-lead {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  column-gap: 14px;
+  align-items: start;
+}
+.tj-member-lead .tj-editor-photo {
+  grid-row: 1 / 6;
+  width: 96px;
+  height: 112px;
+  margin: 0;
+}
+.tj-member-lead:not(:has(.tj-editor-photo)) {
+  display: block;
+}
+
+/* Homepage: tighter gap between the About box and Current Issue */
+.homepage_about {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+.homepage_about .tj-about {
+  margin-bottom: 0;
+}
+.homepage_about > p:empty,
+.homepage_about > p:not(:has(*)):not(:has(~ *)) {
+  display: none;
+}
+.page_index_journal .current_issue {
+  padding-top: 24px;
+}
+.page_index_journal .current_issue > h2 {
+  margin-top: 0;
+}
+
+/* Issue pages / Current Issue: remove the large gap above "Articles" */
+.obj_issue_toc .heading {
+  padding-bottom: 16px;
+}
+.obj_issue_toc .heading .published {
+  margin-bottom: 0;
+}
+.obj_issue_toc .sections {
+  margin-top: 20px !important;
+}
+.obj_issue_toc .sections .section:first-child > h2,
+.obj_issue_toc .sections .section:first-child > h3 {
+  margin-top: 0 !important;
+}
+.obj_issue_toc .heading .cover {
+  margin-bottom: 12px !important;
+}
+
+/* Issue pages / Current Issue: remove the gap below the "Articles" tab */
+.obj_issue_toc .sections .cmp_article_list {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+.obj_issue_toc .sections .cmp_article_list > li:first-child {
+  padding-top: 14px !important;
+}
+
+/* Issue pages / Current Issue: compact spacing between articles */
+.obj_issue_toc .cmp_article_list > li {
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+}
+.obj_issue_toc .cmp_article_list > li:first-child {
+  padding-top: 12px !important;
+}
+.obj_issue_toc .obj_article_summary .title {
+  margin-bottom: 2px !important;
+}
+.obj_issue_toc .obj_article_summary .meta {
+  padding-top: 0 !important;
+}
+.obj_issue_toc .obj_article_summary .galleys_links {
+  margin-top: 8px !important;
+}
+.obj_issue_toc .obj_article_summary .obj_galley_link {
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+}
+.obj_issue_toc .obj_article_summary .tj-abstract {
+  margin-top: 6px !important;
+}
+
+/* Article statistics line (added by the tjArticleStats plugin) */
+.obj_article_summary .tj-stats {
+  margin-top: 8px;
+  font-family: var(--tj-sans);
+  font-size: 0.82rem;
+  color: var(--tj-muted);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+.obj_article_summary .tj-stats strong {
+  color: var(--tj-maroon);
+  font-weight: 700;
+}
+.obj_article_summary .tj-stats-sep {
+  color: var(--tj-line);
+}
+
+/* Article page: "Statistics" item (tjArticleStats plugin), shown right under the PDF button */
+.obj_article_details .entry_details {
+  display: flex;
+  flex-direction: column;
+}
+.obj_article_details .entry_details > .item {
+  order: 3;
+}
+.obj_article_details .entry_details > .item.cover_image {
+  order: 0;
+}
+.obj_article_details .entry_details > .item.galleys {
+  order: 1;
+}
+.obj_article_details .entry_details > .item.tj-article-stats {
+  order: 2;
+}
+.tj-article-stats .value {
+  display: flex;
+  gap: 10px;
+}
+.tj-article-stats .tj-stat {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 6px;
+  background: #fffaf2;
+  border: 1px solid var(--tj-line);
+  border-top: 3px solid var(--tj-gold);
+  border-radius: 6px;
+  font-family: var(--tj-sans);
+  font-size: 0.75rem;
+  color: var(--tj-muted);
+  text-align: center;
+  line-height: 1.3;
+}
+.tj-article-stats .tj-stat strong {
+  font-family: var(--tj-serif);
+  font-size: 1.35rem;
+  color: var(--tj-maroon);
+  line-height: 1.2;
+}
+
+/* Homepage: remove the extra gap above "About the Journal" */
+.page_index_journal .homepage_about {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+.page_index_journal .homepage_about .tj-about-title {
+  margin-top: 0 !important;
+}
+
+/* Sidebar: "Most Read Articles" (tjArticleStats plugin), placed under the Editor box */
+.pkp_structure_sidebar > .block_tj_most_read {
+  order: 2;
+}
+.tj-most-read {
+  list-style: none;
+  counter-reset: tjmr;
+  margin: 0;
+  padding: 0;
+}
+.tj-most-read li {
+  counter-increment: tjmr;
+  position: relative;
+  padding: 10px 0 10px 34px;
+  border-bottom: 1px solid var(--tj-line);
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+.tj-most-read li:last-child {
+  border-bottom: none;
+}
+.tj-most-read li::before {
+  content: counter(tjmr);
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--tj-maroon);
+  color: #fff;
+  font-family: var(--tj-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+.tj-most-read li:first-child::before {
+  background: var(--tj-gold);
+}
+.tj-most-read a {
+  display: block;
+  color: var(--tj-ink);
+  font-weight: 600;
+  text-decoration: none;
+}
+.tj-most-read a:hover,
+.tj-most-read a:focus {
+  color: var(--tj-maroon);
+  text-decoration: underline;
+}
+.tj-mr-views {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.78rem;
+  color: var(--tj-gold);
+  font-weight: 700;
+}
+.tj-mr-note {
+  margin: 6px 0 0;
+  font-size: 0.72rem;
+  font-style: italic;
+  color: var(--tj-muted);
+}

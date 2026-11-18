@@ -1,0 +1,34 @@
+<!-- Teachers' Journal: expandable "Abstract" under each article in issue lists.
+     Paste into the Custom Header plugin's "Footer content" box (needs that plugin installed).
+     It loads each abstract from the article page only when a reader opens it. -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.obj_issue_toc .obj_article_summary').forEach(function (item) {
+    var link = item.querySelector('.title a');
+    if (!link || item.querySelector('.tj-abstract')) return;
+    var box = document.createElement('details');
+    box.className = 'tj-abstract';
+    box.innerHTML = '<summary>Abstract</summary><div>Loading…</div>';
+    item.appendChild(box);
+    var loaded = false;
+    box.addEventListener('toggle', function () {
+      if (!box.open || loaded) return;
+      loaded = true;
+      fetch(link.href, { credentials: 'same-origin' })
+        .then(function (r) { return r.text(); })
+        .then(function (html) {
+          var doc = new DOMParser().parseFromString(html, 'text/html');
+          var abs = doc.querySelector('.item.abstract');
+          var body = box.querySelector('div');
+          if (!abs) { body.textContent = 'No abstract available.'; return; }
+          var label = abs.querySelector('.label');
+          if (label) label.remove();
+          body.innerHTML = abs.innerHTML;
+        })
+        .catch(function () {
+          box.querySelector('div').innerHTML = '<a href="' + link.href + '">Read the abstract on the article page</a>';
+        });
+    });
+  });
+});
+</script>
